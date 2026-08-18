@@ -1,2 +1,49 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Store text as LF and check it out as LF on every platform.
+* text=auto eol=lf
+
+# SVG is text and should remain diffable.
+*.svg text eol=lf
+
+# Raster images and design assets.
+*.avif binary
+*.bmp binary
+*.gif binary
+*.ico binary
+*.jpeg binary
+*.jpg binary
+*.png binary
+*.psd binary
+*.tif binary
+*.tiff binary
+*.webp binary
+
+# Fonts.
+*.eot binary
+*.otf binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
+
+# Audio.
+*.aac binary
+*.flac binary
+*.m4a binary
+*.mid binary
+*.midi binary
+*.mp3 binary
+*.oga binary
+*.ogg binary
+*.opus binary
+*.wav binary
+
+# Video and packaged binary assets.
+*.7z binary
+*.gz binary
+*.mkv binary
+*.mov binary
+*.mp4 binary
+*.pdf binary
+*.rar binary
+*.wasm binary
+*.webm binary
+*.zip binary
