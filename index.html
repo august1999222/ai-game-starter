@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="一个用于验证网页小游戏模板可运行、可交互、可测试的通用冒烟演示。"
+    />
+    <title>网页小游戏模板 · 冒烟演示</title>
+  </head>
+  <body>
+    <main class="app-shell" data-testid="game-app">
+      <section class="demo-panel" aria-labelledby="demo-title">
+        <div class="demo-heading">
+          <div>
+            <p class="eyebrow">通用模板冒烟演示</p>
+            <h1 id="demo-title">点击方块所在区域，让它移动</h1>
+          </div>
+
+          <div class="score-card" aria-live="polite">
+            <span>分数</span>
+            <output data-testid="score">0</output>
+          </div>
+        </div>
+
+        <div
+          id="game-canvas-root"
+          class="game-canvas-root"
+          data-testid="game-container"
+          aria-label="游戏画布"
+        ></div>
+
+        <div class="demo-controls">
+          <p>鼠标点击或触摸画布即可移动。移动方向由固定种子确定，方便稳定复现。</p>
+          <button type="button" data-testid="restart-button">重新开始</button>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
